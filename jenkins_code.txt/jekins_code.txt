@@ -1,0 +1,4 @@
+name = $1
+team = $2
+echo "Hi Iam $name.I was deployed into the $team team."
+
