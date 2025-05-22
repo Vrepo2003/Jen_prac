@@ -1,0 +1,3 @@
+name = $1
+team = $2
+echo "Hi iam $name. I was assigned to $team team."
