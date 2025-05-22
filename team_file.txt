@@ -1,4 +1,4 @@
 #!/bin/bash
-name = $1
-team = $2
+name=$1
+team=$2
 echo "Hi my name was $name. I was deployed into the $team team."
