@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+
+    triggers {
+        githubPush() // Triggers when PR is merged (push to main)
+    }
+
+    stages {
+        stage('Build') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "🔧 Building code after PR merged into main branch"
+                // Example: sh 'npm install' or 'mvn clean install'
+            }
+        }
+
+        stage('Test') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "🧪 Running tests"
+                // Example: sh 'npm test'
+            }
+        }
+
+        stage('Deploy') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "🚀 Deploying application"
+                // Example: sh './deploy.sh'
+            }
+        }
+    }
+}
+
